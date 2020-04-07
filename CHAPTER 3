@@ -1,1 +1,55 @@
 
+##### **Code that produces the output below with `main()`**
+![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FcWr4RJ%2FbtqCoRNcig1%2FXqV9sXZgWRNOx3rqkafx9K%2Fimg.png)
+
+```cpp
+#include <iostream>
+using namespace std;
+ 
+int main() {
+    Tower myTower; // 1 미터
+    Tower seoulTower(100); // 100 미터
+    cout << "높이는 " << myTower.getHeight() << "미터" << endl;
+    cout << "높이는 " << seoulTower.getHeight() << "미터" << endl;
+}
+```
+
+### **Purpose**
+_Create a class that contains a few members and 2 constrctors_
+##### **Output**
+![images](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FbSZZEW%2FbtqCn04Jx5Z%2FPUuU47deMjkD19xBSAbjwK%2Fimg.png)
+
+##### **Code:**
+```cpp
+#include<iostream>
+using namespace std;
+ 
+class Tower{
+    int height;
+public:
+    Tower();
+    Tower(int h);
+    int getHeight();
+}; 
+ 
+Tower::Tower(){ // 매개변수가 없는 생성자 
+    height=1;
+}
+ 
+Tower::Tower(int h){ // 매개변수가 하나 있는 생성자 
+    height=h;
+}
+ 
+int Tower::getHeight(){ 
+    return height;
+}
+ 
+int main() {
+    Tower myTower;
+    Tower seoulTower(100);
+    cout << "높이는 " << myTower.getHeight() << "미터" << endl;
+    cout << "높이는 " << seoulTower.getHeight() << "미터" << endl;
+}
+```
+
+_`Constructor Overloading` can be achieved in `C++`_
